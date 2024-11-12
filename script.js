@@ -171,7 +171,9 @@ function minusNumbers(a, b) {
   let sum = a - b;
 
   return sum;
-  console.log(sum);
+  console.log(sum)
+
+    ;
 }
 
 let firstSum = minusNumbers(10, 2);
@@ -189,3 +191,31 @@ function myFirstfunction() {
 }
 
 myFirstfunction();
+
+//oppgave 2.2 hvordan hente inn ting vi skal gjøre
+
+const button = document.querySelector('#showBtn');
+let text = document.querySelector('#text');
+let toggle = document.querySelector('#toggleCont');
+let toggleCircle = document.querySelector('#toggleCircle');
+
+toggle.addEventListener("click", function()  {
+  if (toggleCircle.classList.contains('move')){
+    toggleCircle.classList.remove('move')
+  toggleCircle.classList.add('moveback')
+} else {
+
+  toggleCircle.classList.remove('moveback')
+  toggleCircle.classList.add('move')
+}
+
+}
+)
+
+button.addEventListener("click", function () {
+
+  text.classList.toggle('showTextBox')
+  text.classList.toggle('hiddenBox') 
+
+  console.log('click is registered');
+})
